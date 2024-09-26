@@ -182,7 +182,8 @@ $dayOfWeek
 道德点: &lt;&lt;print $daode&gt;&gt;
 疲劳值: &lt;&lt;print $sleep&gt;&gt;
 理智: &lt;&lt;print $san&gt;&gt;
-</tw-passagedata><tw-passagedata pid="3" name="Storylnit" tags="" position="500,0" size="100,100">/*主角属性*/
+open = &lt;&lt;print $open&gt;&gt;
+close = &lt;&lt;print $close&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Storylnit" tags="" position="500,0" size="100,100">/*主角属性*/
 &lt;&lt;set $pwe = 0&gt;&gt;/* 力量*/
 &lt;&lt;set $hl = 0&gt;&gt;/*体力值*/
 &lt;&lt;set $sleep = 0&gt;&gt;/*疲劳值*/
@@ -472,7 +473,7 @@ if else：
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-手电筒: &lt;&lt;set $close = true&gt;&gt;&lt;span id=&quot;stats-str&quot;&gt;已关闭&lt;/span&gt;
+手电筒: &lt;span id=&quot;stats-str&quot;&gt;&lt;&lt;if $close == true&gt;&gt;已关闭&lt;&lt;/if&gt;&gt;&lt;&lt;if $open == true&gt;&gt;已打开&lt;&lt;/if&gt;&gt;&lt;/span&gt;
  &lt;&lt;button &quot;[打开]&quot;&gt;&gt;&lt;&lt;set $done++&gt;&gt;&lt;&lt;set $open = true&gt;&gt;&lt;&lt;set $close = false&gt;&gt;&lt;&lt;replace &quot;#stats-str&quot;&gt;&gt;已打开&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;[关闭]&quot;&gt;&gt;&lt;&lt;set $done++&gt;&gt;&lt;&lt;set $open = false&gt;&gt;&lt;&lt;set $close = true&gt;&gt;&lt;&lt;replace &quot;#stats-str&quot;&gt;&gt;已关闭&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt; 
 
 &lt;&lt;return &quot;返回&quot;&gt;&gt;
