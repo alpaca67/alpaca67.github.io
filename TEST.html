@@ -104,7 +104,8 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="TEST" startnode="1" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="0177133D-D1D0-430C-A97D-FB10B94116C1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@keyframes move {
+	<tw-storydata name="TEST" startnode="1" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="0177133D-D1D0-430C-A97D-FB10B94116C1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*时间动画*/
+@keyframes move {
 	0%{
 		transform: translate(-100%);
 	}
@@ -112,29 +113,47 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 			transform: translateX(100%);
 		}
 }
+#time
+{
+  animation: move 2s;
+}
 
+
+/*媒体查询*/
+@media (hover: none)/*手机*/
+{
+  /*表格大小*/
+  .t1 {
+	width: 100%;
+	height: 90%;}	
+  /*战斗页面字体大小*/
+  .t2{
+    font-size: 13px;
+    color: aliceblue;
+ }
+}
+@media (hover: hover) /*电脑*/
+{
+  .t1 {
+	width: 75%;
+	height: 90%;}
+  
+  .t2{
+		font-size: 14px;
+		color: aliceblue;
+	}
+}
+
+
+/*通用样式*/
+/*侧边栏字体*/
 .text1 {
 	color: #1C91C4;
 	font-size: 13px;
     font-weight: bolder;
 }
 
-#time
-{
-  animation: move 2s;
-}
-@media (hover: none)
-{
-.t1 {
-	width: 90%;
-	height: 90%;}	
-}
-@media (hover: hover) 
-{
-.t1 {
-	width: 60%;
-	height: 90%;}
-}
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="widget" color="green"></tw-tag><tw-tag name="noretuen" color="yellow"></tw-tag><tw-passagedata pid="1" name="into" tags="" position="300,200" size="100,100">&lt;h3&gt;&lt;font color=&quot;#C0C0C0&quot;&gt;ECHO_回声&lt;/font&gt;&lt;/h3&gt;
 &lt;font color=&quot;red&quot; size=&quot;5px&quot;&gt;Trigger warnings (触发预警): 战争，少量暴力，角色死亡，封闭空间&lt;/font&gt;
 灵感来自一场噩梦，游玩愉快。
@@ -491,7 +510,7 @@ if else：
   
 &lt;&lt;timed 1s&gt;&gt;但又大又厚重的厢门需要两个人一起发力才推得动。&lt;&lt;/timed&gt;&gt;  
   
-&lt;&lt;timed 3s&gt;&gt;此时你已经分不清是自己的脑袋在轰鸣还是外面发出的，或者两者都有。可怕的撕裂声也许只是你的幻想，但你已经顾不上这些了，用全力将拉杆压了下去。  &lt;font color=&quot;#004295&quot;&gt;(理智-1)&lt;/font&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;此时你已经分不清是自己的脑袋在轰鸣还是外面发出的，或者两者都有。可怕的撕裂声也许只是你的幻想，但你已经顾不上这些了，用全力将拉杆压了下去。  &lt;font color=&quot;#9270CA&quot;&gt;(理智-1)&lt;/font&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $san -= 1&gt;&gt;
 &lt;&lt;timed 5s&gt;&gt;在车上面摇晃的巨大金属门终于倒了下来，将门口封的严严实实，为你们抵挡了大部分冲击，你们也终于松了一口气。  &lt;&lt;/timed&gt;&gt;
 
@@ -501,7 +520,7 @@ if else：
   
 &lt;&lt;timed 4s&gt;&gt;一名同僚打开了原本用来放枪口的小窗，透过窗口可以看到周围是土质的墙壁，这里似乎是个电梯井与矿井结合的地方。拉着你们慢慢往下放的应该是钢索，从金属摩擦产生的恼人的回声判断，这鬼地方很深。  &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 7s&gt;&gt;过了一会，敌人似乎出动了地面部队，地面传来了混乱的枪声。一个受了伤但还活着的敌人不慎跌入了你们所在的深坑，你们顺着小窗看到他一闪而过面目狰狞的脸。毫无疑问，这个高度不论什么东西掉下去都死透了。 &lt;font color=&quot;#004295&quot;&gt;(理智-1)&lt;/font&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 7s&gt;&gt;过了一会，敌人似乎出动了地面部队，地面传来了混乱的枪声。一个受了伤但还活着的敌人不慎跌入了你们所在的深坑，你们顺着小窗看到他一闪而过面目狰狞的脸。毫无疑问，这个高度不论什么东西掉下去都死透了。 &lt;font color=&quot;#9270CA&quot;&gt;(理智-1)&lt;/font&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $san -= 1&gt;&gt;
 &lt;&lt;set $T2san -= 1&gt;&gt;
 
@@ -563,13 +582,13 @@ if else：
 
 &lt;&lt;return &quot;返回&quot;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="21" name="止血带" tags="" position="1200,250" size="100,100">&lt;img src=&quot;img/止血带.jpg&quot; width=&quot;200&quot; height=&quot;200&quot; alt=&quot;&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="21" name="止血带" tags="" position="1200,250" size="100,100">&lt;img src=&quot;img/item/止血带.png&quot; width=&quot;200&quot; height=&quot;200&quot; alt=&quot;&quot;/&gt;
 一种急救工具，用于战场的标准止血带，可以作为挽救生命的临时措施。经过专门设计，简单有效。
 
 可恢复 5 点体力值
 
 &lt;&lt;back &quot;返回&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="M4A1" tags="" position="1925,250" size="100,100">&lt;strong&gt;Colt M4A1 CQBR Carbine rifle&lt;/strong&gt;
-&lt;img src=&quot;img/M4A1.png&quot; alt=&quot;&quot;/&gt;
+&lt;img src=&quot;img/wep/M4A1.png&quot; alt=&quot;&quot;/&gt;
 很经典的自动步枪。
 
 口径 :5.56mm x 45mm NATO
@@ -578,7 +597,7 @@ if else：
 伤害: 20
 
 &lt;&lt;back &quot;返回&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="M1911" tags="" position="1775,250" size="100,100">&lt;strong&gt;Colt M1911a1&lt;/strong&gt;
-&lt;img src=&quot;img/M1911.png&quot; alt=&quot;&quot;/&gt;
+&lt;img src=&quot;img/wep/M1911.png&quot; alt=&quot;&quot;/&gt;
 一款半自动手枪，十分可靠。
 
 口径: .45 ACP
@@ -646,7 +665,7 @@ hl = &lt;&lt;print $T1hl&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;&lt;return &quot;返回&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="防毒面具" tags="" position="1325,250" size="100,100">&lt;img src=&quot;img/mask.png&quot; alt=&quot;&quot;/&gt;
+&lt;&lt;return &quot;返回&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="防毒面具" tags="" position="1325,250" size="100,100">&lt;img src=&quot;img/item/mask.png&quot; alt=&quot;&quot;/&gt;
 一个半面罩防毒面具
 
 保护鼻子和嘴巴，适用于不需要眼睛保护的场合。
@@ -773,7 +792,9 @@ hl = &lt;&lt;print $T1hl&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="
 &lt;&lt;set $damage  = 10&gt;&gt;
 &lt;&lt;set $pwe = 50&gt;&gt;
 &lt;&lt;set $damage =  0.01 * $pwe * $damage&gt;&gt;
-&lt;&lt;include &quot;Go West&quot;&gt;&gt;   </tw-passagedata><tw-passagedata pid="34" name="knife" tags="" position="1625,250" size="100,100">一把普通的匕首，很锋利。
+&lt;&lt;include &quot;Go West&quot;&gt;&gt;   </tw-passagedata><tw-passagedata pid="34" name="knife" tags="" position="1625,250" size="100,100">&lt;img src=&quot;img/wep/k1.png&quot; alt=&quot;&quot;/&gt;
+
+一把普通的匕首，很锋利。
 
 伤害: 10
 
